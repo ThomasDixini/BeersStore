@@ -2,7 +2,13 @@ import { useState } from 'react';
 import { Button, Container } from './styles'
 
 
-export function Header() {
+interface Headerprops {
+    typePage: (type: string) => void;
+    pag: string;
+}
+
+
+export function Header({ typePage , pag}: Headerprops) {
 
     const [menuButtonSelected, setMenuButtonSelected ] = useState('');
 
@@ -14,15 +20,15 @@ export function Header() {
 
             <img src="" alt="Logo" />
             <ul>
-                <Button
-                onClick={() => { setMenuButtonSelected('list') }}
+                <Button className="menuButton"
+                onClick={() => { setMenuButtonSelected('list'); typePage('list');}}
                 isActive={menuButtonSelected == 'list'}
                 >
                     Listagem
                 </Button>
 
                 <Button
-                onClick={() => { setMenuButtonSelected('register') }}
+                onClick={() => { setMenuButtonSelected('register'); typePage('register'); }}
                 isActive={menuButtonSelected == 'register'}
                 >
                     Cadastro
