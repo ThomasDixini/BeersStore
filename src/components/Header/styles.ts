@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const Container = styled.header`
 
-    background: red;
+    background: #000;
     height: 4rem;
     display: flex;
     align-items: center;
@@ -19,6 +19,9 @@ export const Container = styled.header`
     
 
         li { 
+
+            color: var(--shape);
+
             list-style-type: none;
             display: inline-block;
             margin-right: 2rem;

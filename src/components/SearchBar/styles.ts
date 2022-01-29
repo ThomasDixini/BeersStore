@@ -19,7 +19,13 @@ export const Container = styled.div`
     border: 0;
     border-radius: 0.25rem;
 
-    background-color: gray;
+    background-color: var(--grayBackground);
+    
+    font-size: 1rem;
+
+    &::placeholder {
+        color: var(--darkBlue);
+    }
     }
 
 

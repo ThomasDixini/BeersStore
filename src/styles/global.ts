@@ -5,8 +5,13 @@ export const GlobalStyle = createGlobalStyle`
 
 
 :root {
-    --background: ##e5e6e6;
+    --background:#434A53;
+
+    
     --shape: #ffffff;
+    --verdeAgua: #01A5B1;
+    --darkBlue: #131F2F;
+    --grayBackground: #AABCD0;
 }
 
 * {

@@ -15,7 +15,8 @@ export const Container = styled.div`
     flex-wrap: wrap;
 
     div { 
-    background-color: #ffee55;
+    background-color: var(--darkBlue);
+    color: var(--shape);
 
     margin: auto;
     padding: 2rem;
