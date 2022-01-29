@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 
-    max-width: 1000px;
-    margin: 4rem auto;
+    width: 100%;
+    margin: 3rem auto;
 
 
     display: grid;
