@@ -1,0 +1,9 @@
+
+
+
+export function SearchBar() {
+    return (
+        <>
+        </>
+    );
+}
