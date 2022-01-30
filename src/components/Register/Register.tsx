@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
+import { api } from '../../services/api';
 import { Container, Content } from './styles'
 
 
@@ -6,12 +7,25 @@ import { Container, Content } from './styles'
 export default function Register() {
 
     const [title, setTitle] = useState('')
-    const [category, setCategory] = useState('')
+    const [description, setDescription] = useState('')
+
+    
+
+    function handleCreateNewProduct(event: FormEvent) {
+        event.preventDefault()
+
+        const data = {
+            title,
+            description,
+        }
+
+        api.post('/list/products', data)
+    }
     
 
     return (
         <Container>
-            <Content>
+            <Content onSubmit={handleCreateNewProduct}>
 
                 
                 
@@ -30,8 +44,8 @@ export default function Register() {
                     <input 
                     type="text" 
                     id="descriçao"
-                    value={category}
-                    onChange={event => setCategory(event.target.value)}
+                    value={description}
+                    onChange={event => setDescription(event.target.value)}
                     />
 
                     <button type="submit"> Salvar </button>
