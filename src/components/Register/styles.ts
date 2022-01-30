@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-export const Container = styled.main`
+export const Container = styled.div`
 
 max-width: 1000px;
 margin: 6rem auto ;
@@ -10,7 +10,7 @@ margin: 6rem auto ;
 
 `
 
-export const Content = styled.div`
+export const Content = styled.form`
 
     display: flex;
     flex-direction: column;
@@ -19,8 +19,9 @@ export const Content = styled.div`
 
     
 
+    
 
-        
+    
 
             label {
                 text-align: left;
@@ -50,6 +51,29 @@ export const Content = styled.div`
                     color: var(--darkBlue);
                 }
                 
+            }
+
+            button {
+
+                border: 0;
+                border-radius: 0.5rem;
+
+                padding: 0 2rem;
+                height: 4rem;
+                margin: 1rem ;
+
+                width: 10rem;
+
+                background-color: var(--grayBackground);
+                color: var(--darkBlue);
+
+                font-weight: 600;
+
+                transition: filter 0.2s;
+
+                &:hover {
+                    filter: brightness(0.7);
+                }
             }
     
         

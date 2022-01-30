@@ -13,18 +13,26 @@ export function ProductsList() {
 
     const [products, setProducts] = useState<Product[]>([])
 
-
+    useEffect(() => {
+        api.get('list/products')
+        .then(response => setProducts(response.data.products))
+        
+        
+    }, [])
 
     return(
         <Container>
-            
-                        <div>
-                            <img src="" alt="Produto" />
-                            <h3>Title</h3>
-                            <p>Description</p>
-                        </div>
-                    
-            
+
+            {products.map(product => {
+                return(
+                    <div key={product.id}>
+                        <img src="" alt="Produto" />
+                        <h3>{product.title}</h3>
+                        <p>{product.description}</p>
+                    </div>
+                );
+            })}
+
         </Container>
     );
 }
