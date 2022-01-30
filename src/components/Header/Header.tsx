@@ -20,19 +20,23 @@ export function Header() {
 
             <img src="" alt="Logo" />
             <ul>
+                <Link to="/list" style={{textDecoration: 'none'}}>
                 <Button className="menuButton"
                 onClick={() => { setMenuButtonSelected('list');}}
                 isActive={menuButtonSelected == 'list'}
                 >
-                    <Link style={{ textDecoration: 'none', color: '#fff'}} to="/list"> Listagem </Link>
+                    Listagem
                 </Button>
-
+                </Link>
+                
+                <Link to="/register" style={{ textDecoration: 'none'}}>
                 <Button
                 onClick={() => { setMenuButtonSelected('register');}}
                 isActive={menuButtonSelected == 'register'}
                 >
-                    <Link style={{ textDecoration: 'none' ,color: '#fff'}}to="/register"> Register </Link>
+                    Register
                 </Button>
+                </Link>
             </ul>
         </Container>
     );
