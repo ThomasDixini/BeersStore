@@ -14,6 +14,8 @@ export const Container = styled.div`
 
     flex-wrap: wrap;
 
+    
+
     div { 
     background-color: var(--darkBlue);
     color: var(--shape);
@@ -29,35 +31,53 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
 
-    img {
-        max-height: 12rem;
-        width: 12rem;
-        background-color: var(--grayBackground);
-
-        border-radius: 0.5rem;
-
-        object-fit: contain;
-
-
+    &:hover { 
+        border: 2px solid var(--verdeAgua);
+        cursor: pointer;
     }
 
-    h3 {
-        margin-top: 2rem;
-        
-    }
+        .close {
+            width: 20px;
+            border: 0;
 
-    span {
-        margin-bottom: 2rem;
-        overflow-y: scroll;
-
-        &::-webkit-scrollbar{
             background-color: transparent;
+            color: yellow;
+            position: relative;
+            top: -1rem;
+            left: 8rem;
+
+            &:hover {
+                filter: brightness(0.6)
+            }
+            
+            
         }
 
-        
+        img {
+            max-height: 12rem;
+            width: 12rem;
+            background-color: var(--grayBackground);
 
-        
-    }
+            border-radius: 0.5rem;
+
+            object-fit: contain;
+
+        }
+
+        h3 {
+            margin-top: 2rem;
+            
+        }
+
+        span {
+            margin-bottom: 2rem;
+            overflow-y: scroll;
+
+            &::-webkit-scrollbar{
+                background-color: transparent;
+            }
+            
+        }
 
     }
 
