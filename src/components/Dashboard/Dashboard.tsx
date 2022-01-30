@@ -3,7 +3,10 @@ import { SearchBar } from '../SearchBar/SearchBar';
 import { Container } from './styles';
 
 
-export function Dashboard() {
+
+
+
+export default function Dashboard() {
     return (
         <Container>
             <SearchBar/>

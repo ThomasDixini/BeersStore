@@ -1,14 +1,14 @@
-import { useState } from 'react';
+import {  useState } from 'react';
 import { Button, Container } from './styles'
+import { Link } from 'react-router-dom'
 
 
-interface Headerprops {
-    typePage: (type: string) => void;
-    pag: string;
-}
 
 
-export function Header({ typePage , pag}: Headerprops) {
+
+
+
+export function Header() {
 
     const [menuButtonSelected, setMenuButtonSelected ] = useState('');
 
@@ -21,17 +21,17 @@ export function Header({ typePage , pag}: Headerprops) {
             <img src="" alt="Logo" />
             <ul>
                 <Button className="menuButton"
-                onClick={() => { setMenuButtonSelected('list'); typePage('list');}}
+                onClick={() => { setMenuButtonSelected('list');}}
                 isActive={menuButtonSelected == 'list'}
                 >
-                    Listagem
+                    <Link to="/list"> Listagem </Link>
                 </Button>
 
                 <Button
-                onClick={() => { setMenuButtonSelected('register'); typePage('register'); }}
+                onClick={() => { setMenuButtonSelected('register');}}
                 isActive={menuButtonSelected == 'register'}
                 >
-                    Cadastro
+                    <Link to="/register"> Register </Link>
                 </Button>
             </ul>
         </Container>

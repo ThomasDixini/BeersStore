@@ -1,24 +1,30 @@
 import React, { useState } from 'react';
-import { Dashboard } from './components/Dashboard/Dashboard';
-import { Header } from './components/Header/Header'
+import Dashboard from './components/Dashboard/Dashboard';
+import { Header }  from './components/Header/Header'
 import { GlobalStyle } from './styles/global'
+
+import { BrowserRouter as Router } from 'react-router-dom' 
+
+import Routes from './routes'
+
+
 
 
 export function App() {
 
-  const [page, setPage] = useState('')
-
-  function handleSelectTypePage(type: string) {
-          setPage(type)
-  }
+  
 
   return (
     <>
-      <Header  typePage={handleSelectTypePage} pag={page}/>
-      <Dashboard/>
+    
+      <Router>
+        <Header />
+        <Routes/>
+      </Router>
 
       <GlobalStyle/>
     </>
+    
   );
 }
 
