@@ -23,24 +23,40 @@ export const Container = styled.div`
     border-radius: 0.5rem;
 
     width: 20rem;
-    height: 22rem;
+    height: 26rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
     img {
-        flex-grow: 1;
-        width: 70%;
-        background-color:blue;
+        max-height: 12rem;
+        width: 12rem;
+        background-color: var(--grayBackground);
+
+        border-radius: 0.5rem;
+
+        object-fit: contain;
+
+
     }
 
     h3 {
         margin-top: 2rem;
+        
     }
 
-    p {
+    span {
         margin-bottom: 2rem;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar{
+            background-color: transparent;
+        }
+
+        
+
+        
     }
 
     }

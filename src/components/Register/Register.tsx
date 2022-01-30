@@ -8,6 +8,7 @@ export default function Register() {
 
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
+   
 
     
 
@@ -21,6 +22,9 @@ export default function Register() {
 
         api.post('/list/products', data)
     }
+
+
+    
     
 
     return (

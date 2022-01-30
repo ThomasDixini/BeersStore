@@ -55,6 +55,8 @@ export const Content = styled.form`
 
             button {
 
+                
+
                 border: 0;
                 border-radius: 0.5rem;
 
