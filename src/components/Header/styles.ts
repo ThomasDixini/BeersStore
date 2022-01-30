@@ -36,6 +36,7 @@ export const Button = styled.li<ButtonProps>`
 
             transition: background 0.2s;
 
+
             color: var(--shape);
             background: ${props => props.isActive ? 'var(--verdeAgua)' : 'transparent'};
 

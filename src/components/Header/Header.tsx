@@ -24,14 +24,14 @@ export function Header() {
                 onClick={() => { setMenuButtonSelected('list');}}
                 isActive={menuButtonSelected == 'list'}
                 >
-                    <Link to="/list"> Listagem </Link>
+                    <Link style={{ textDecoration: 'none', color: '#fff'}} to="/list"> Listagem </Link>
                 </Button>
 
                 <Button
                 onClick={() => { setMenuButtonSelected('register');}}
                 isActive={menuButtonSelected == 'register'}
                 >
-                    <Link to="/register"> Register </Link>
+                    <Link style={{ textDecoration: 'none' ,color: '#fff'}}to="/register"> Register </Link>
                 </Button>
             </ul>
         </Container>
