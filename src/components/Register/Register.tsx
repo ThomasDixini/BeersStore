@@ -1,26 +1,30 @@
-import { FormEvent, useEffect, useState } from 'react';
-import { api } from '../../services/api';
+import { FormEvent, useContext, useState } from 'react';
+import { BeersContext } from '../../BeersContext';
 import { Container, Content } from './styles'
 
 
 
 export default function Register() {
 
-    const [title, setTitle] = useState('')
+
+    const {createBeer} = useContext(BeersContext)
+
+    const [name, setName] = useState('')
     const [description, setDescription] = useState('')
    
 
     
 
-    function handleCreateNewProduct(event: FormEvent) {
+    async function handleCreateNewProduct(event: FormEvent) {
         event.preventDefault()
 
-        const data = {
-            title,
-            description,
-        }
+        await createBeer({
+            name,
+            description
+        })
 
-        api.post('/list/products', data)
+        setName('')
+        setDescription('')
     }
 
 
@@ -37,8 +41,8 @@ export default function Register() {
                     <input 
                     type="text" 
                     id="titulo"
-                    value={title}
-                    onChange={event => setTitle(event.target.value)}
+                    value={name}
+                    onChange={event => setName(event.target.value)}
                     />
                 
                 

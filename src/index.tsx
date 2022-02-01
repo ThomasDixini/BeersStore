@@ -4,7 +4,7 @@ import { App } from './App';
 import { createServer, Model } from 'miragejs'
 
 
-/*
+
 createServer({
 
   models: {
@@ -27,6 +27,7 @@ createServer({
       ]
 
     })
+  
   },
 
   routes() {
@@ -45,7 +46,7 @@ createServer({
     
   }
 })
-*/
+
 
 
 

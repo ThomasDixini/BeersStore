@@ -1,42 +1,18 @@
-import { useEffect, useState } from "react";
+import { useContext} from "react";
 
-import { api } from "../../services/api";
+
 
 import { Container} from "./styles";
 import closeImg from '../../assets/Vector.svg'
-
-import { Product } from '../Dashboard/Dashboard'
-
-interface ProductsListProps {
-    beers: Product[],
-    removeBeer: (id: number) => void;
-}
+import { BeersContext } from "../../BeersContext";
 
 
-export function ProductsList({beers, removeBeer}: ProductsListProps) {
+
+export function ProductsList() {
+
+    const {beers, handleRemoveBeer} = useContext(BeersContext)
 
     
-
-
-
- /*   
-    useEffect(() => {
-        api.get('list/products')
-        .then(response => setProducts(response.data.products))
-        
-    }, [])
-*/
-
-    
-
-    
-
-    
-
-
-
-    
-
     return(
         <Container>
 
@@ -47,7 +23,7 @@ export function ProductsList({beers, removeBeer}: ProductsListProps) {
                     <div key={beer.id}>
                         
 
-                        <img className="close" src={closeImg} alt="Cerveja" onClick={() => removeBeer(beer.id)}/>
+                        <img className="close" src={closeImg} alt="Cerveja" onClick={() => handleRemoveBeer(beer.id)}/>
                         <img src={beer.image_url} alt="Produto" />
                         <h3>{beer.name}</h3>
                         <span>{beer.description}</span>

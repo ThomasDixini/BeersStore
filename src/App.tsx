@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import Dashboard from './components/Dashboard/Dashboard';
+
+import { BeersProvider } from './BeersContext'
+
+
 import { Header }  from './components/Header/Header'
 import { GlobalStyle } from './styles/global'
 
-import { BrowserRouter as Router } from 'react-router-dom' 
 
+import { BrowserRouter as Router } from 'react-router-dom' 
 import Routes from './routes'
 
 
@@ -15,7 +17,7 @@ export function App() {
   
 
   return (
-    <>
+    <BeersProvider>
     
       <Router>
         <Header />
@@ -23,7 +25,7 @@ export function App() {
       </Router>
 
       <GlobalStyle/>
-    </>
+    </BeersProvider>
     
   );
 }
